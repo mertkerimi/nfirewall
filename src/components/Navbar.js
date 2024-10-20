@@ -4,7 +4,6 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import logo from "../assets/img/logo.svg";
-import logo2 from "../assets/img/NfirewallLogo.webp";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const NavBar = () => {
@@ -30,8 +29,13 @@ const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
-            {/* <img src={logo2} alt="Logo" /> */}
+          <Navbar.Brand href="/" style={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              src={logo}
+              alt="Logo"
+              style={{ width: '30px', height: 'auto', marginTop: '-8px' }}
+            />
+            <h4 style={{ color: 'white', marginLeft: '10px' }}>NFirewall</h4>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -81,7 +85,7 @@ const NavBar = () => {
                 </a>
               </div> */}
               <Navbar.Brand href="#connect">
-                <button>
+                <button style={{ padding: '5px 10px', fontSize: '15px' }}>
                   <span>Bize Ulaşın</span>
                 </button>
               </Navbar.Brand>

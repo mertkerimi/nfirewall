@@ -50,9 +50,6 @@ const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            {/* <a href={CV} download="Mert Kerimi CV">
-              <button className="tagline">Download my CV</button>
-            </a> */}
             <h1>
               {`Hizmetlerimiz`}
               <br />
