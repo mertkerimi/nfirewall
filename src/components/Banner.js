@@ -8,7 +8,7 @@ import CV from "../assets/CV/CV.pdf";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designer", "Mobile Developer"];
+  const toRotate = ["Siber Güvenlik","IT Danışmanlığı"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -50,11 +50,11 @@ const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <a href={CV} download="Mert Kerimi CV">
+            {/* <a href={CV} download="Mert Kerimi CV">
               <button className="tagline">Download my CV</button>
-            </a>
+            </a> */}
             <h1>
-              {`Hi! I'm Mert `}
+              {`Hizmetlerimiz`}
               <br />
               <span
                 className="txt-rotate"
@@ -63,10 +63,9 @@ const Banner = () => {
                 <span className="wrap">{text}</span>
               </span>
             </h1>
-            <p>Hello, I'm Mert Kerimi.</p>
             <Navbar.Brand href="#connect">
               <button onClick={() => console.log("connect")}>
-                Let's connect <ArrowRightCircle size={25} />
+                Bize Ulaşın <ArrowRightCircle size={25} />
               </button>
             </Navbar.Brand>
           </Col>

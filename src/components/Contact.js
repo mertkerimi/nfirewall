@@ -7,11 +7,11 @@ import "animate.css";
 const Contact1 = () => {
   const formRef = useRef();
   const [status, setStatus] = useState({});
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState("Gönder");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
+    setButtonText("Gönderiliyor...");
     emailjs
       .sendForm(
         "service_izgl1lg",
@@ -21,7 +21,7 @@ const Contact1 = () => {
       )
       .then(
         (result) => {
-          setButtonText("Send");
+          setButtonText("Gönder");
           console.log(result.text);
           setStatus({
             succes: true,
@@ -29,7 +29,7 @@ const Contact1 = () => {
           });
         },
         (error) => {
-          setButtonText("Send");
+          setButtonText("Gönder");
           console.log(error.text);
           setStatus({
             succes: false,
@@ -57,35 +57,36 @@ const Contact1 = () => {
           </Col>
           <Col size={12} md={6}>
             <div>
-              <h2>Get In Touch</h2>
-              <form ref={formRef} onSubmit={handleSubmit}>
+              {/* <h2>Bize Ulaşın</h2> */}
+              <h3>Email: info@nfirewall.com</h3>
+              {/* <form ref={formRef} onSubmit={handleSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="text"
-                      placeholder="First Name"
+                      placeholder="İsim"
                       name="firstName"
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="text"
-                      placeholder="Last Name"
+                      placeholder="Soyisim"
                       name="lastName"
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="email"
-                      placeholder="Email Adress"
+                      placeholder="Email"
                       name="email"
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="tel" placeholder="Phone No." name="phone" />
+                    <input type="tel" placeholder="Telefon Numarası" name="phone" />
                   </Col>
                   <Col size={12} className="px-1">
-                    <textarea rows="6" placeholder="Message" name="message" />
+                    <textarea rows="6" placeholder="Mesaj" name="message" />
                     <button type="submit">
                       <span>{buttonText}</span>
                     </button>
@@ -102,7 +103,7 @@ const Contact1 = () => {
                     )}
                   </Col>
                 </Row>
-              </form>
+              </form> */}
             </div>
           </Col>
         </Row>
