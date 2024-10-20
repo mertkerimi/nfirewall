@@ -65,7 +65,7 @@ const Banner = () => {
             </h1>
             <Navbar.Brand href="#connect">
               <button onClick={() => console.log("connect")}>
-                Bize Ulaşın. <ArrowRightCircle size={25} />
+                Bize Ulaşın<ArrowRightCircle size={25} />
               </button>
             </Navbar.Brand>
           </Col>
