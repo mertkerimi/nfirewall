@@ -429,7 +429,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
   background: #fff
-}****** Projects Css ************/
+}
+
+/****** Projects Css ************/
 
 .project {
   padding: 100px 0 110px 0;
