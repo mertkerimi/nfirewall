@@ -63,7 +63,7 @@ const Contact1 = () => {
               <a href="mailto:info@nfirewall.com" className="email-link">
                 info@nfirewall.com
               </a>
-              <p>Herhangi bir sorunuz varsa, bizimle iletişime geçmekten çekinmeyin.</p>
+              <p>Herhangi bir sorunuz varsa, bize ulaşmaktan çekinmeyin, size yardımcı olmaktan memnuniyet duyarız.</p>
             </div>
               {/* <form ref={formRef} onSubmit={handleSubmit}>
                 <Row>
