@@ -1,75 +1,83 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import javascript from "../assets/img/javascript.svg";
-import swift from "../assets/img/swift.svg";
-import reactNative from "../assets/img/react-native.svg";
-import html from "../assets/img/html.svg";
-import css from "../assets/img/css.svg";
+import security from "../assets/img/security.png";
+import network from "../assets/img/network.png";
+import cloud from "../assets/img/cloud.png";
+import wrench from "../assets/img/wrench.png";
+import management from "../assets/img/management.png";
 
 const Skills = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 1, // Her seferinde 1 öğe gösterilecek
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 1, // Her seferinde 1 öğe gösterilecek
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 1, // Her seferinde 1 öğe gösterilecek
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 1, // Her seferinde 1 öğe gösterilecek
     },
   };
+
+  const skillsData = [
+    {
+      img: cloud,
+      title: "Bulut Hizmetleri",
+      description: "Bulut hizmetleri, veri depolama, hesaplama ve ağ hizmetlerini bir araya getirerek kullanıcılara eşsiz bir esneklik, kolay erişilebilirlik ve ölçeklenebilirlik sunar. Bu sayede, kullanıcılar ihtiyaçlarına göre kaynaklarını dinamik bir şekilde yönetebilir ve iş süreçlerini daha verimli hale getirebilirler."
+    },
+    {
+      img: network,
+      title: "Ağ Altyapı İşlemleri",
+      description: "Verimli bir ağ altyapısı, şirketlerin bilgi işlem sistemlerinde olağanüstü performans ve güvenilirlik sunarak, iş süreçlerinin aksamadan sürdürülmesine olanak tanır. Bu altyapı, sistemlerin sorunsuz çalışabilmesi için kritik bir öneme sahiptir ve işletmelerin hedeflerine ulaşmalarında temel bir rol oynar."
+    },
+    {
+      img: security,
+      title: "Güvenlik",
+      description: "Güvenlik, bilgi koruma, siber saldırıların etkili bir şekilde önlenmesi ve güvenlik açıklarının titizlikle kapatılması gibi temel fonksiyonlara odaklanarak, dijital varlıkların güvenliğini sağlamak için kritik bir rol oynar. Bu kapsamda, sistemlerin bütünlüğü ve kullanıcıların gizliliği korunarak, güvenli bir dijital ortam oluşturulması hedeflenir."
+    },
+    {
+      img: wrench,
+      title: "Bakım Destek",
+      description: "Bakım destek hizmetleri, BT altyapılarının güvenliğini, güncelliğini ve performansını sağlamanın yanı sıra, iş sürekliliğini ve verimliliği artırarak işletmelere önemli katkılar sunar. Bununla birlikte, veri güvenliği ve gizliliğinin korunmasına yönelik önlemler alarak, kullanıcıların dijital varlıklarının güvenliğini pekiştirir."
+    },
+    {
+      img: management,
+      title: "Yönetilen Hizmetler",
+      description: "Yönetilen hizmetler, çeşitli iş yüklerini optimize ederek BT süreçlerinden en yüksek verimliliği elde etmeye olanak tanır ve kaynakların etkin bir şekilde kullanılmasını sağlar. Bu sayede, işletmelerin operasyonel verimliliği artarken, aynı zamanda maliyetlerin minimize edilmesi hedeflenir."
+    },
+  ];
+
   return (
     <section className="skill" id="skills">
       <Container>
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>About Me</h2>
-              <p>
-                I'm a Frontend Web Developer and Mobile Developer building the
-                Front-end of Websites and Web Applications that leads to the
-                success of the overall product. Check out some of my work in the
-                Projects section.
-              </p>
-              <p>
-                I'm open to Job opportunities where I can contribute, learn and
-                grow. If you have a good opportunity that matches my skills and
-                experience then don't hesitate to contact me.
-              </p>
-              <h2>Skills</h2>
+              <h2>Hizmetlerimiz</h2>
               <Carousel
                 responsive={responsive}
-                infinite={true}
                 className="skill-slider"
+                infinite={true}
+                arrows={false} // Disable arrows
+                showDots={true} // Enable dots pagination
+                autoPlay={true}
+                dotListClass="custom-dot-list-style"
               >
-                <div className="item">
-                  <img src={reactNative} alt="reactNative" />
-                  <h5>React/React Native</h5>
-                </div>
-                <div className="item">
-                  <img src={swift} alt="swift" />
-                  <h5>Swift</h5>
-                </div>
-                <div className="item">
-                  <img src={javascript} alt="javascript" />
-                  <h5>JavaScript</h5>
-                </div>
-                <div className="item">
-                  <img src={html} alt="html" />
-                  <h5>HTML</h5>
-                </div>
-                <div className="item">
-                  <img src={css} alt="css" />
-                  <h5>CSS</h5>
-                </div>
+                {skillsData.map((skill, index) => (
+                  <div className="item" key={index}>
+                    <img src={skill.img} alt={skill.title} />
+                    <h5>{skill.title}</h5>
+                    <p>{skill.description}</p> {/* Açıklayıcı metin */}
+                  </div>
+                ))}
               </Carousel>
             </div>
           </Col>

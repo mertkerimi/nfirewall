@@ -1,49 +1,56 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col, Navbar } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg1 from "../assets/img/cyber-card.png";
-import TrackVisibility from "react-on-screen";
-import CV from "../assets/CV/CV.pdf";
+import { useState, useEffect } from "react"
+import { Container, Row, Col, Navbar } from "react-bootstrap"
+import { ArrowRightCircle } from "react-bootstrap-icons"
+import headerImg1 from "../assets/img/cyber-card.png"
+import TrackVisibility from "react-on-screen"
+import CV from "../assets/CV/CV.pdf"
 
 const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Siber Güvenlik","IT Danışmanlığı"];
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const [loopNum, setLoopNum] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const toRotate = [
+    "Siber Güvenlik",
+    "IT Danışmanlığı",
+    "Bakım Destek",
+    "Bulut Hizmetleri",
+    "Ağ Altyapı İşlemleri"
+  ]
+  const [text, setText] = useState("")
+  // Yazma hızını daha da artırdım
+  const [delta, setDelta] = useState(200) 
+  const period = 2000
 
   useEffect(() => {
     let ticker = setInterval(() => {
-      tick();
-    }, delta);
+      tick()
+    }, delta)
     return () => {
-      clearInterval(ticker);
-    };
+      clearInterval(ticker)
+    }
     // eslint-disable-next-line
-  }, [text]);
+  }, [text])
 
   const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
+    let i = loopNum % toRotate.length
+    let fullText = toRotate[i]
     let updateText = isDeleting
       ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-    setText(updateText);
+      : fullText.substring(0, text.length + 1)
+    setText(updateText)
 
     if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
+      setDelta((prevDelta) => prevDelta / 2)
     }
 
     if (!isDeleting && updateText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
+      setIsDeleting(true)
+      setDelta(period)
     } else if (isDeleting && updateText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
+      setIsDeleting(false)
+      setLoopNum(loopNum + 1)
+      setDelta(200)
     }
-  };
+  }
 
   return (
     <section className="banner" id="home">
@@ -55,16 +62,11 @@ const Banner = () => {
               <br />
               <span
                 className="txt-rotate"
-                data-rotate='[ "Web Developer", "Web Designer", "Mobile Developer" ]'
+                data-rotate='[ "Siber Güvenlik", "IT Danışmanlığı", "Bakım Destek", "Bulut Hizmetleri", "Ağ Altyapı İşlemleri" ]'
               >
                 <span className="wrap">{text}</span>
               </span>
             </h1>
-            <Navbar.Brand href="#connect">
-              <button onClick={() => console.log("connect")}>
-                Bize Ulaşın<ArrowRightCircle size={25} />
-              </button>
-            </Navbar.Brand>
           </Col>
           <Col xs={10} md={6} xl={5}>
             <TrackVisibility>
@@ -82,7 +84,7 @@ const Banner = () => {
         </Row>
       </Container>
     </section>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

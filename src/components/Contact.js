@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import contactImg from "../assets/img/contact-img.svg";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
+
 const Contact1 = () => {
   const formRef = useRef();
   const [status, setStatus] = useState({});
@@ -38,6 +39,7 @@ const Contact1 = () => {
         }
       );
   };
+
   return (
     <section className="contact" id="connect">
       <Container>
@@ -47,7 +49,7 @@ const Contact1 = () => {
               {({ isVisible }) => (
                 <img
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? "animate__animated animate__zoomIn contact-img" : "contact-img"
                   }
                   src={contactImg}
                   alt="Contact Us"
@@ -56,9 +58,13 @@ const Contact1 = () => {
             </TrackVisibility>
           </Col>
           <Col size={12} md={6}>
-            <div>
-              {/* <h2>Bize Ulaşın</h2> */}
-              <h3>Email: info@nfirewall.com</h3>
+            <div className="contact-info">
+              <h2>Bize Ulaşın</h2>
+              <a href="mailto:info@nfirewall.com" className="email-link">
+                info@nfirewall.com
+              </a>
+              <p>Herhangi bir sorunuz varsa, bizimle iletişime geçmekten çekinmeyin.</p>
+            </div>
               {/* <form ref={formRef} onSubmit={handleSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
@@ -104,7 +110,6 @@ const Contact1 = () => {
                   </Col>
                 </Row>
               </form> */}
-            </div>
           </Col>
         </Row>
       </Container>
@@ -113,3 +118,5 @@ const Contact1 = () => {
 };
 
 export default Contact1;
+
+

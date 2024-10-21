@@ -4,11 +4,13 @@
   src: url("./assets/font/CentraNo2-Bold.ttf");
   font-weight: 700;
 }
+
 @font-face {
   font-family: Centra;
   src: url("./assets/font/CentraNo2-Medium.ttf");
   font-weight: 500;
 }
+
 @font-face {
   font-family: Centra;
   src: url("./assets/font/CentraNo2-Book.ttf");
@@ -92,6 +94,7 @@ p.success {
 p.danger {
   color: red;
 }
+
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -101,13 +104,16 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 }
+
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #0d293c;
 }
+
 nav.navbar a.navbar-brand {
   width: 9%;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -116,23 +122,28 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-size: 18px;
   opacity: 0.75;
 }
+
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
   color: #ee6f57 !important;
   transition: 0.5s ease-in-out;
 }
+
 span.navbar-text {
   display: flex;
   align-items: center;
 }
+
 .navbar img {
   width: 60px;
 }
+
 .social-icon {
   display: inline-block;
   margin-left: 14px;
 }
+
 /* social icon */
 .social-icon a {
   width: 42px;
@@ -146,6 +157,7 @@ span.navbar-text {
   line-height: 1;
   border: 1px solid #145374;
 }
+
 /* social icon before*/
 .social-icon a::before {
   content: "";
@@ -157,10 +169,12 @@ span.navbar-text {
   transform: scale(0);
   transition: 0.8s ease-in-out;
 }
+
 /* social icon hover size */
 .social-icon a:hover::before {
   transform: scale(1);
 }
+
 /* social icon size*/
 .social-icon a img {
   width: 40%;
@@ -178,16 +192,19 @@ span.navbar-text {
   background: #145374;
   transition: 0.8s ease-in-out;
 }
+
 .navbar-text button:hover {
   background: #ee6f57;
   border-color: #ee6f57;
   color: white;
 }
+
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
 }
+
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;
@@ -197,9 +214,11 @@ nav.navbar .navbar-toggler-icon {
   transition: all 300ms linear;
   top: -2px;
 }
+
 nav.navbar .navbar-toggler-icon:focus {
   border-bottom: 2px solid #fff;
 }
+
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
   width: 24px;
@@ -212,19 +231,23 @@ nav.navbar .navbar-toggler-icon:before {
   z-index: 2;
   transition: all 300ms linear;
 }
+
 nav.navbar .navbar-toggler-icon:after {
   top: 8px;
 }
+
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transform: rotate(45deg);
   background-color: #fff;
   height: 2px;
 }
+
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   transform: translateY(8px) rotate(-45deg);
   background-color: #fff;
   height: 2px;
 }
+
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
@@ -232,12 +255,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 300px 0 100px 0;
   background-image: url("./assets/img/banner-hd1.svg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 /* Download My CV */
 .banner .tagline {
   font-weight: 700;
@@ -249,15 +273,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: inline-block;
 }
+
 /* Bu benim ilk kişisel sayfam */
 .banner h1 {
-  font-size: 65px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
 }
+
 .banner p {
   color: #ee7057d6;
   font-size: 18px;
@@ -265,6 +291,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 100%;
 }
+
 .banner button {
   color: #fff;
   font-weight: 700;
@@ -275,9 +302,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
+
 .banner button:hover {
   color: #ee6f57 !important;
 }
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
@@ -293,36 +322,85 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner img {
   animation: updown 5s linear infinite;
 }
+
+@media (max-width: 768px) {
+
+  /* Mobil görünüm için */
+  .banner {
+    padding: 300px 0 50px 0;
+    /* Mobilde daha az padding */
+    min-height: 400px;
+    /* Kapsayıcının minimum yüksekliğini artır */
+    /* İhtiyacınıza göre değeri ayarlayabilirsiniz */
+  }
+
+  .banner h1 {
+    font-size: 50px;
+    /* Başlık boyutunu azalt */
+  }
+
+  .banner p {
+    font-size: 16px;
+    /* Paragraf boyutunu azalt */
+  }
+
+  .banner button {
+    font-size: 20px;
+    /* Buton boyutunu azalt */
+    margin-top: 30px;
+    /* Butonun üst marginini azalt */
+  }
+
+  .banner .tagline {
+    font-size: 14px;
+    /* Tagline boyutunu azalt */
+    padding: 6px 8px;
+    /* Tagline paddingini azalt */
+  }
+
+  .banner img {
+    animation: updown 5s linear infinite;
+    margin-left: 15%;
+  }
+}
+
 @keyframes updown {
   0% {
     transform: translateY(-20px);
   }
+
   50% {
     transform: translateY(20px);
   }
+
   100% {
     transform: translateY(-20px);
   }
 }
-.txt-rotate > .wrap {
+
+.txt-rotate>.wrap {
   border-right: 0.08em solid #fff;
 }
+
 /************ Skills Css ************/
 .skill {
   padding: 50px 0 100px 0;
   position: relative;
   background-color: #0d293c;
 }
+
 .skill-bx {
   background: #6f88a0;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 40px 30px;
 }
+
 .skill h2 {
   font-size: 45px;
   font-weight: 700;
 }
+
 .skill p {
   color: #b8b8b8;
   font-size: 18px;
@@ -330,17 +408,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px 0 10px 0;
 }
+
 .skill-slider {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
+  margin-top: 50px;
 }
+
 .skill-slider .item img {
-  width: 50%;
+  width: 15%;
   border-radius: 10px;
   margin: 0 auto 15px auto;
 }
-/************ Projects Css ************/
+
+.custom-dot-list-style button {
+  margin-top: 20px;
+  border: none;
+  background:#b8b8b8
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: #fff
+}****** Projects Css ************/
 
 .project {
   padding: 100px 0 110px 0;
@@ -354,6 +443,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   text-align: center;
 }
+
 .project p {
   color: #b8b8b8;
   font-size: 20px;
@@ -363,6 +453,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
@@ -370,6 +461,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 24px;
   margin-top: 40px;
 }
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #002b5b -5.91%, #2b4865 111.58%);
@@ -379,9 +471,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: 0;
 }
+
 .proj-imgbx:hover::before {
   height: 100%;
 }
+
 .proj-txtx {
   position: absolute;
   text-align: center;
@@ -393,6 +487,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0;
   width: 100%;
 }
+
 .visit {
   border: 2px solid #fff;
   color: #fff !important;
@@ -401,16 +496,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 35%;
   width: 100px;
 }
+
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
 }
+
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
+
 .proj-txtx span {
   color: #b8b8b8;
   font-size: 18px;
@@ -420,6 +518,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 20%;
 }
+
 .proj-txtx button {
   margin: 0 auto;
   font-size: 18px;
@@ -433,29 +532,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #ffffff;
   transition: 0.5s ease-in-out;
 }
+
 .proj-txtx button:hover {
   background: #ee6f57;
   border-color: #ee6f57;
   color: white;
 }
+
 .proj-txtx button svg {
   margin-left: 5px;
   width: 15px;
 }
+
 /************ Contact Css ************/
 
 .contact {
   background-color: #0d293c;
   padding: 60px 0 10px 0;
 }
+
 .contact img {
   width: 90%;
 }
+
 .contact h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 30px;
 }
+
 .contact form input,
 .contact form textarea {
   width: 100%;
@@ -469,17 +574,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8;
   transition: 0.3s ease-in-out;
 }
+
 .contact form input:focus,
 .contact form textarea:focus {
   background-color: rgba(255, 255, 255, 1);
   color: #121212;
 }
+
 .contact form input::placeholder,
 .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 600;
   color: #b8b8b8;
 }
+
 .contact form button {
   font-weight: 700;
   color: #fff;
@@ -491,6 +599,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   transition: 0.8s ease-in-out;
 }
+
 .contact form button:hover {
   background: #ee6f57;
   border-color: #ee6f57;
@@ -503,9 +612,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   background-color: #0d293c;
 }
+
 .footer img {
   width: 70px;
 }
+
 .footer p {
   font-weight: 400;
   font-size: 18px;
@@ -513,6 +624,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
 .footer-img {
   text-align: left;
 }
@@ -521,28 +633,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner {
     background-image: url("./assets/img/banner-hd1.svg");
   }
+
   .navbar-text button {
     padding: 14px 20px;
   }
 }
+
 @media screen and (max-width: 700px) {
-  
+
   .banner {
     background-image: url("./assets/img/banner-hd2.svg");
   }
+
   .banner button {
     margin-top: 20px !important;
   }
+
   .banner img {
     width: 300px;
     height: 300px;
     margin-top: 140px !important;
   }
 }
+
 @media screen and (max-width: 375px) {
   .navbar-text button {
     padding: 14px 20px;
   }
+
   .banner {
     background-image: url("./assets/img/banner-hd2.svg");
   }
